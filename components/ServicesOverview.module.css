@@ -1,0 +1,273 @@
+.services {
+  padding: 8rem 2rem;
+  background: var(--cream);
+  position: relative;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.heading {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.accent {
+  color: var(--terracotta);
+  font-style: italic;
+}
+
+.intro {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--olive);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 3rem;
+}
+
+.card {
+  background: var(--warm-white);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(139, 157, 131, 0.2);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--terracotta), var(--burnt-orange));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+.card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.cardIcon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .cardIcon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.cardTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  line-height: 1.3;
+}
+
+.cardDescription {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--olive);
+  flex: 1;
+}
+
+.featuresList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 1rem 0;
+}
+
+.featurePill {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  background: var(--cream);
+  color: var(--charcoal);
+  border-radius: 20px;
+  font-family: var(--font-accent);
+  border: 1px solid rgba(139, 157, 131, 0.3);
+  transition: all 0.3s ease;
+}
+
+.card:hover .featurePill {
+  background: var(--warm-white);
+  border-color: var(--sage);
+}
+
+.cardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-accent);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-top: auto;
+  padding-top: 1rem;
+  transition: gap 0.3s ease;
+  letter-spacing: 0.02em;
+  align-self: flex-start;
+}
+
+.cardLink:hover {
+  gap: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 5rem 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .card {
+    padding: 2.5rem;
+  }
+
+  .cardIcon {
+    width: 80px;
+    height: 80px;
+  }
+}
+/* Add these styles to your ServicesOverview.module.css */
+
+/* Fix service card image sizing */
+.cardImage {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Fixed height for consistency */
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintains aspect ratio */
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.05); /* Subtle zoom on hover */
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.2) 100%);
+  pointer-events: none;
+}
+
+/* Icon positioning relative to card */
+.cardIcon {
+  position: absolute;
+  top: 260px; /* Slightly overlapping image */
+  left: 2rem;
+  width: 80px;
+  height: 80px;
+  background: var(--warm-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  transition: all 0.4s ease;
+}
+
+.card:hover .cardIcon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Card structure */
+.card {
+  position: relative;
+  background: var(--warm-white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(139, 157, 131, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Content padding to account for icon */
+.cardContent {
+  padding: 4rem 2rem 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .cardImage {
+    height: 250px;
+  }
+  
+  .cardIcon {
+    top: 210px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardImage {
+    height: 220px;
+  }
+  
+  .cardIcon {
+    top: 180px;
+    width: 70px;
+    height: 70px;
+  }
+  
+  .cardContent {
+    padding: 3.5rem 1.5rem 1.5rem;
+  }
+}

@@ -1,0 +1,426 @@
+.page {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+  padding: 10rem 2rem 6rem;
+  background: linear-gradient(135deg, var(--warm-white) 0%, var(--cream) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139, 157, 131, 0.08) 0%, transparent 70%);
+}
+
+.heroContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-accent);
+  font-size: 1rem;
+  color: var(--olive);
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
+}
+
+.backLink:hover {
+  color: var(--terracotta);
+  gap: 0.7rem;
+}
+
+.heroTitle {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  color: var(--charcoal);
+}
+
+.accent {
+  color: var(--terracotta);
+  font-style: italic;
+}
+
+.heroDescription {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: var(--olive);
+  max-width: 800px;
+}
+
+/* Services Section */
+.servicesSection {
+  padding: 6rem 2rem;
+  background: var(--warm-white);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.serviceCard {
+  background: var(--cream);
+  border-radius: 20px;
+  padding: 4rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(139, 157, 131, 0.2);
+}
+
+.serviceHeader {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.serviceIcon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--warm-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--terracotta);
+  flex-shrink: 0;
+}
+
+.serviceHeader h2 {
+  font-size: 2.5rem;
+  color: var(--charcoal);
+  margin: 0;
+}
+
+.pricing {
+  font-family: var(--font-accent);
+  font-size: 1.3rem;
+  color: var(--deep-green);
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.serviceDescription {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--olive);
+  margin-bottom: 3rem;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: 1.05rem;
+  color: var(--charcoal);
+}
+
+.feature svg {
+  color: var(--sage);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.subSection {
+  margin: 3rem 0;
+}
+
+.subSection h3 {
+  font-size: 1.8rem;
+  color: var(--charcoal);
+  margin-bottom: 1.5rem;
+}
+
+.flavorGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.flavorItem {
+  background: var(--warm-white);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  font-family: var(--font-accent);
+  font-size: 1.05rem;
+  color: var(--charcoal);
+  text-align: center;
+  border: 1px solid rgba(139, 157, 131, 0.2);
+  transition: all 0.3s ease;
+}
+
+.flavorItem:hover {
+  background: var(--sage);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 2.5rem;
+  background: var(--terracotta);
+  color: white;
+  font-family: var(--font-accent);
+  font-size: 1.15rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.4s ease;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 15px rgba(212, 115, 92, 0.3);
+}
+
+.ctaButton:hover {
+  background: var(--burnt-orange);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(212, 115, 92, 0.4);
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 6rem 2rem;
+  background: var(--deep-green);
+  color: white;
+}
+
+.ctaContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ctaContent h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.ctaContent p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 3rem;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 2.5rem;
+  background: var(--terracotta);
+  color: white;
+  font-family: var(--font-accent);
+  font-size: 1.15rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(212, 115, 92, 0.3);
+}
+
+.primaryButton:hover {
+  background: var(--burnt-orange);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(212, 115, 92, 0.4);
+}
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 2.5rem;
+  background: transparent;
+  color: white;
+  font-family: var(--font-accent);
+  font-size: 1.15rem;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 2px solid white;
+  transition: all 0.4s ease;
+}
+
+.secondaryButton:hover {
+  background: white;
+  color: var(--deep-green);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 8rem 1.5rem 4rem;
+  }
+
+  .servicesSection {
+    padding: 4rem 1.5rem;
+  }
+
+  .serviceCard {
+    padding: 2.5rem;
+  }
+
+  .serviceHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .flavorGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ctaSection {
+    padding: 4rem 1.5rem;
+  }
+}
+/* Add these styles to your existing ServicePage.module.css */
+
+/* Quick Navigation Buttons */
+.quickNav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.quickNavButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.8rem;
+  background: var(--warm-white);
+  color: var(--charcoal);
+  font-family: var(--font-accent);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 2px solid var(--sage);
+  transition: all 0.3s ease;
+  letter-spacing: 0.02em;
+}
+
+.quickNavButton:hover {
+  background: var(--sage);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(139, 157, 131, 0.3);
+}
+
+@media (max-width: 768px) {
+  .quickNav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .quickNavButton {
+    width: 100%;
+  }
+}
+
+/* Add these styles to your ServicePage.module.css file */
+
+/* Menu Link Section */
+.menuLinkSection {
+  padding: 4rem 2rem;
+  background: var(--warm-white);
+}
+
+.menuLinkCard {
+  max-width: 800px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, var(--terracotta) 0%, var(--burnt-orange) 100%);
+  color: white;
+  padding: 4rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(212, 115, 92, 0.3);
+}
+
+.menuIcon {
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.menuLinkCard h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.menuLinkCard p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.menuButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1.2rem 2.5rem;
+  background: white;
+  color: var(--terracotta);
+  font-family: var(--font-accent);
+  font-size: 1.15rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.menuButton:hover {
+  background: var(--cream);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .menuLinkSection {
+    padding: 3rem 1.5rem;
+  }
+  
+  .menuLinkCard {
+    padding: 2.5rem;
+  }
+}

@@ -1,0 +1,226 @@
+.about {
+  padding: 8rem 2rem;
+  background: var(--warm-white);
+  position: relative;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.sectionLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-accent);
+  font-size: 0.95rem;
+  color: var(--sage);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
+.heading {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  margin-bottom: 2.5rem;
+  line-height: 1.2;
+}
+
+.accent {
+  color: var(--terracotta);
+  font-style: italic;
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.story p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--olive);
+}
+
+.highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.highlight {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background: var(--cream);
+  border-radius: 12px;
+  border-left: 4px solid var(--terracotta);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight:hover {
+  transform: translateX(10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.highlightIcon {
+  color: var(--terracotta);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.highlight h4 {
+  font-family: var(--font-accent);
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+  color: var(--charcoal);
+}
+
+.highlight p {
+  font-size: 1rem;
+  color: var(--olive);
+  line-height: 1.6;
+}
+
+.imageArea {
+  position: relative;
+  height: 600px;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--sage) 0%, var(--deep-green) 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.imagePlaceholder span {
+  font-family: var(--font-accent);
+  font-size: 1.2rem;
+  color: white;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+.imagePlaceholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.3;
+}
+
+.decorElement {
+  position: absolute;
+  bottom: -2rem;
+  right: -2rem;
+  width: 200px;
+  height: 200px;
+  border: 3px solid var(--terracotta);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+@media (max-width: 968px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .imageArea {
+    height: 400px;
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 5rem 1.5rem;
+  }
+
+  .imageArea {
+    height: 350px;
+  }
+}
+/* Add these styles to your About.module.css */
+
+/* Fix Vanessa's photo sizing */
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 700px; /* Fixed height for portrait */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.aboutImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintains aspect ratio */
+  object-position: center;
+  border-radius: 20px;
+}
+
+/* Ensure imageArea has proper structure */
+.imageArea {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Decorative element */
+.decorElement {
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 115, 92, 0.2) 0%, transparent 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .imageContainer {
+    height: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .imageContainer {
+    height: 500px;
+    margin-top: 3rem;
+  }
+  
+  .decorElement {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .imageContainer {
+    height: 400px;
+  }
+}
