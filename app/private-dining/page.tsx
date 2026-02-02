@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import ImageSlideshow from '@/components/ImageSlideshow';
-import ServicePage from '@/components/ServicePage';
+import ServicesOverview from '@/components/ServicesOverview';
 
 export default function PrivateDining() {
   // Private dining slideshow images
@@ -86,7 +86,7 @@ export default function PrivateDining() {
         />
 
         {/* Service Content */}
-        <ServicePage
+        <ServicesOverview
           title="Set the Table"
           subtitle="Private Dining Excellence"
           description="Vanessa's signature private dining venture brings restaurant-quality Caribbean cuisine with global influences directly to you. Whether it's an intimate supper club, bespoke private chef service, or grand event catering, every detail is crafted to perfection."
