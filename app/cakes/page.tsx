@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import ImageSlideshow from '@/components/ImageSlideshow';
-import ServicePage from '@/components/ServicePage';
+import ServicePageContent from '@/components/ServicePageContent';
 
 export default function Cakes() {
   // Cakes slideshow images
@@ -82,7 +82,7 @@ export default function Cakes() {
         />
 
         {/* Service Content */}
-        <ServicePage
+        <ServicePageContent
           title="Celebratory Cakes & Bakes"
           subtitle="Sweet Creations for Every Occasion"
           description="Each cake and baked creation is crafted with love, featuring Caribbean-inspired flavors and stunning designs. From grand wedding cakes to intimate celebration treats, every item is freshly made to order using premium ingredients."

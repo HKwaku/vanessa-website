@@ -8,6 +8,7 @@ import styles from './About.module.css';
 export default function About() {
   return (
     <section className={styles.about} id="about">
+      {/* Main Content Grid - Text and Image */}
       <div className={styles.container}>
         <motion.div
           className={styles.content}
@@ -18,7 +19,7 @@ export default function About() {
         >
           <div className={styles.sectionLabel}>
             <Sparkles size={18} />
-            <span>About Vanessa</span>
+            <span>About</span>
           </div>
 
           <h2 className={styles.heading}>
@@ -56,30 +57,6 @@ export default function About() {
               Caribbean traditions and global culinary excellence.
             </p>
           </div>
-
-          <div className={styles.highlights}>
-            <div className={styles.highlight}>
-              <Award className={styles.highlightIcon} />
-              <div>
-                <h4>BBC Masterchef 2022</h4>
-                <p>Competed among Britain's finest home cooks on national television</p>
-              </div>
-            </div>
-            <div className={styles.highlight}>
-              <Globe className={styles.highlightIcon} />
-              <div>
-                <h4>Caribbean with Global Influences</h4>
-                <p>Traditional recipes meet international culinary excellence</p>
-              </div>
-            </div>
-            <div className={styles.highlight}>
-              <Heart className={styles.highlightIcon} />
-              <div>
-                <h4>Creator of Set the Table</h4>
-                <p>Premium private dining experiences and culinary services</p>
-              </div>
-            </div>
-          </div>
         </motion.div>
 
         <motion.div
@@ -102,6 +79,39 @@ export default function About() {
           <div className={styles.decorElement} />
         </motion.div>
       </div>
+
+      {/* Highlights - Separate Full-Width Container */}
+      <motion.div
+        className={styles.highlightsContainer}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-100px' }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+      >
+        <div className={styles.highlights}>
+          <div className={styles.highlight}>
+            <Award className={styles.highlightIcon} size={32} />
+            <div>
+              <h4>BBC Masterchef 2022</h4>
+              <p>Competed among Britain's finest home cooks on national television</p>
+            </div>
+          </div>
+          <div className={styles.highlight}>
+            <Globe className={styles.highlightIcon} size={32} />
+            <div>
+              <h4>Caribbean with Global Influences</h4>
+              <p>Traditional recipes meet international culinary excellence</p>
+            </div>
+          </div>
+          <div className={styles.highlight}>
+            <Heart className={styles.highlightIcon} size={32} />
+            <div>
+              <h4>Creator of Set the Table</h4>
+              <p>Premium private dining experiences and culinary services</p>
+            </div>
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 }

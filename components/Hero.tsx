@@ -1,12 +1,63 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { Award, ChefHat, ArrowRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Award, ArrowRight } from 'lucide-react';
 import styles from './Hero.module.css';
 
-export default function Hero() {
+export interface HeroBackgroundImage {
+  src: string;
+  alt: string;
+}
+
+interface HeroProps {
+  backgroundImages?: HeroBackgroundImage[];
+  backgroundAutoPlayInterval?: number;
+}
+
+export default function Hero({
+  backgroundImages,
+  backgroundAutoPlayInterval = 5000,
+}: HeroProps) {
+  const [backgroundIndex, setBackgroundIndex] = useState(0);
+  const images = backgroundImages ?? [];
+
+  useEffect(() => {
+    if (images.length <= 1) return;
+    const interval = setInterval(() => {
+      setBackgroundIndex((prev) => (prev + 1) % images.length);
+    }, backgroundAutoPlayInterval);
+    return () => clearInterval(interval);
+  }, [images.length, backgroundAutoPlayInterval]);
+
   return (
-    <section className={styles.hero} id="home">
+    <section
+      className={`${styles.hero} ${images.length > 0 ? styles.heroWithBackground : ''}`}
+      id="home"
+    >
+      {/* Background slideshow */}
+      {images.length > 0 && (
+        <div className={styles.heroBackground} aria-hidden>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={backgroundIndex}
+              className={styles.heroBackgroundSlide}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1 }}
+            >
+              <img
+                src={images[backgroundIndex].src}
+                alt=""
+                className={styles.heroBackgroundImage}
+              />
+            </motion.div>
+          </AnimatePresence>
+          <div className={styles.heroOverlay} />
+        </div>
+      )}
+
       <div className={styles.heroContent}>
         <motion.div
           className={styles.badge}
@@ -35,9 +86,6 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
         >
-          From intimate supper clubs to premium food delivery,
-          <br />
-          I bring restaurant-quality cuisine to your table.
         </motion.p>
 
         <motion.div

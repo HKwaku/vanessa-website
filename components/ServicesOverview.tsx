@@ -7,7 +7,7 @@ import styles from './ServicesOverview.module.css';
 const services = [
   {
     icon: Users,
-    title: 'Set the Table',
+    title: 'Private Dining Experiences',
     description: 'Intimate supper clubs and bespoke private chef services bringing restaurant-quality Caribbean cuisine with global influences to your home or venue.',
     features: ['Supper Clubs', 'Private Chef', 'Dinner Parties', 'In-Home Service'],
     link: '/private-dining',
@@ -22,7 +22,7 @@ const services = [
     features: ['Weekly Meal Prep', 'Event Catering', 'Corporate Events', 'Party Catering'],
     link: '/takeaway',
     color: 'var(--deep-green)',
-    image: '/images/events/caribbean-rice-platter.jpeg',
+    image: '/images/food/jerk-chicken-rice.jpeg',
     imageAlt: 'Caribbean Rice Platter - Take Away Services'
   },
   {
@@ -49,9 +49,7 @@ export default function ServicesOverview() {
           transition={{ duration: 0.8 }}
         >
           <h2 className={styles.heading}>
-            Our
-            <br />
-            <span className={styles.accent}>Services</span>
+            Our <span className={styles.accent}>Services</span>
           </h2>
           <p className={styles.intro}>
             Caribbean cuisine with influences from all over the world.

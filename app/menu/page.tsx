@@ -113,9 +113,7 @@ export default function Menu() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              Our
-              <br />
-              <span className={styles.accent}>Menu</span>
+              Our <span className={styles.accent}>Menu</span>
             </motion.h1>
 
             <motion.p

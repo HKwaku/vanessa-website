@@ -37,7 +37,10 @@ export default function Home() {
   return (
     <main>
       <Navigation></Navigation>
-      <Hero />
+      <Hero
+        backgroundImages={slideshowImages}
+        backgroundAutoPlayInterval={5000}
+      />
       <About />
       
       {/* Image Slideshow between About and Services */}
