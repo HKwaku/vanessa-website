@@ -90,18 +90,16 @@
   pointer-events: none;
 }
 
-/* HIGHLIGHTS - Separate Full-Width Container */
+/* HIGHLIGHTS - Full-Width Below Grid */
 .highlightsContainer {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 2rem;
 }
 
 .highlights {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  width: 100%;
 }
 
 .highlight {
