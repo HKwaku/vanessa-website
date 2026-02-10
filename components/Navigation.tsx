@@ -26,7 +26,7 @@ export default function Navigation() {
       href: '/#services',
       dropdown: [
         { label: 'Private Dining Experiences', href: '/private-dining' },
-        { label: 'Take Away Services', href: '/takeaway' },
+        { label: 'Menu & Take Away', href: '/menu' },
         { label: 'Celebratory Cakes & Bakes', href: '/cakes' }
       ]
     },

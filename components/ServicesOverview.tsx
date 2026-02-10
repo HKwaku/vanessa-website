@@ -12,17 +12,17 @@ const services = [
     features: ['Supper Clubs', 'Private Chef', 'Dinner Parties', 'In-Home Service'],
     link: '/private-dining',
     color: 'var(--terracotta)',
-    image: '/images/events/supper-club-dining.jpeg',
+    image: '/images/events/event1.jpeg',
     imageAlt: 'Set the Table Supper Club Dining Experience'
   },
   {
     icon: ShoppingBag,
-    title: 'Take Away Services',
+    title: 'Menu & Take Away',
     description: 'Weekly meal delivery and event catering featuring fresh Caribbean cuisine. From intimate gatherings to grand celebrations, we handle every detail.',
     features: ['Weekly Meal Prep', 'Event Catering', 'Corporate Events', 'Party Catering'],
-    link: '/takeaway',
+    link: '/menu',
     color: 'var(--deep-green)',
-    image: '/images/food/jerk-chicken-rice.jpeg',
+    image: '/images/food/takeaway2.jpeg',
     imageAlt: 'Caribbean Rice Platter - Take Away Services'
   },
   {

@@ -1,34 +1,56 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { ArrowLeft } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import ImageSlideshow from '@/components/ImageSlideshow';
 import ServicePageContent from '@/components/ServicePageContent';
+import styles from '@/styles/ServicePage.module.css';
 
 export default function PrivateDining() {
   // Private dining slideshow images
   const slideshowImages = [
     {
-      src: '/images/events/supper-club-dining.jpeg',
-      alt: 'Intimate supper club dining experience'
+      src: '/images/events/event1.jpeg',
+      alt: ''
     },
     {
-      src: '/images/events/focaccia-tomatoes.jpeg',
-      alt: 'Private chef preparing exquisite dishes'
+      src: '/images/events/event2.jpeg',
+      alt: ''
     },
     {
-      src: '/images/events/lamb-chops-plated.jpeg',
-      alt: 'Large platter for event catering'
+      src: '/images/events/event3.jpeg',
+      alt: ''
     },
     {
-      src: '/images/food/chicken-wings-platter.jpeg',
-      alt: 'Appetizers for private dining'
+      src: '/images/events/event4.jpeg',
+      alt: ''
     },
     {
-      src: '/images/food/lamb-chops-plated.jpeg',
-      alt: 'Fine dining plated service'
-    }
+      src: '/images/events/event5.jpeg',
+      alt: ''
+    },
+    {
+      src: '/images/events/event6.jpeg',
+      alt: ''
+    },
+    {
+      src: '/images/events/event7.jpeg',
+      alt: ''
+    },
+    {
+      src: '/images/events/event8.jpeg',
+      alt: ''
+    },
+    {
+      src: '/images/events/event9.jpeg',
+      alt: ''
+    },
+    {
+      src: '/images/events/event10.jpeg',
+      alt: ''
+    },
   ];
 
   const services = [
@@ -78,12 +100,44 @@ export default function PrivateDining() {
       <Navigation />
       <main>
         {/* Slideshow Hero */}
-        <ImageSlideshow 
-          images={slideshowImages}
-          height="500px"
-          autoPlayInterval={5000}
-          showControls={true}
-        />
+        <section className={styles.heroSlideshow}>
+          <ImageSlideshow 
+            images={slideshowImages}
+            height="100%"
+            autoPlayInterval={5000}
+            showControls={true}
+          />
+          <div className={styles.heroOverlay}>
+            <motion.a
+              href="/"
+              className={styles.backLink}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <ArrowLeft size={20} />
+              Back to Home
+            </motion.a>
+            <motion.h1
+              className={styles.heroTitle}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+            >
+              Private <span className={styles.heroAccent}>Dining</span>
+            </motion.h1>
+            <motion.p
+              className={styles.heroDescription}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+            >
+              Intimate supper clubs, bespoke private chef services, and event catering.
+              <br />
+              Restaurant-quality Caribbean cuisine brought directly to you.
+            </motion.p>
+          </div>
+        </section>
 
         {/* Service Content */}
         <ServicePageContent

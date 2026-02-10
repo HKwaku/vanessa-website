@@ -8,30 +8,33 @@ import Contact from '@/components/Contact';
 export default function Home() {
   // Homepage slideshow images
   const slideshowImages = [
+    { 
+      src: '/images/food/event11.jpeg', 
+      alt: '' },
     {
-      src: '/images/events/supper-club-dining.jpeg',
-      alt: 'Elegant supper club dining experience'
+      src: '/images/events/event1.jpeg',
+      alt: ''
     },
     {
-      src: '/images/events/caribbean-rice-platter.jpeg',
-      alt: 'Caribbean rice platter being served'
+      src: '/images/events/event3.jpeg',
+      alt: ''
     },
     {
-      src: '/images/food/jerk-chicken-rice.jpeg',
-      alt: 'Jerk chicken with rice and peas'
+      src: '/images/events/event4.jpeg',
+      alt: ''
     },
     {
-      src: '/images/events/private-chef-service.jpeg',
-      alt: 'Private chef service at intimate gathering'
+      src: '/images/events/event5.jpeg',
+      alt: ''
     },
     {
-      src: '/images/cakes/sunset-ombre-cake.jpeg',
-      alt: 'Beautiful sunset ombre celebration cake'
+      src: '/images/events/event6.jpeg',
+      alt: ''
     },
-    {
-      src: '/images/food/lamb-chops-plated.jpeg',
-      alt: 'Plated lamb chops with roasted potatoes'
-    }
+    { src: '/images/food/takeaway0.jpeg', alt: '' },
+    { src: '/images/food/takeaway1.jpeg', alt: '' },
+    { src: '/images/food/takeaway3.jpeg', alt: '' },
+    { src: '/images/food/event11.jpeg', alt: '' },
   ];
 
   return (

@@ -1,10 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { ArrowLeft } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import ImageSlideshow from '@/components/ImageSlideshow';
 import ServicePageContent from '@/components/ServicePageContent';
+import styles from '@/styles/ServicePage.module.css';
 
 export default function Cakes() {
   // Cakes slideshow images
@@ -74,12 +76,44 @@ export default function Cakes() {
       <Navigation />
       <main>
         {/* Slideshow Hero */}
-        <ImageSlideshow 
-          images={slideshowImages}
-          height="500px"
-          autoPlayInterval={4500}
-          showControls={true}
-        />
+        <section className={styles.heroSlideshow}>
+          <ImageSlideshow 
+            images={slideshowImages}
+            height="100%"
+            autoPlayInterval={4500}
+            showControls={true}
+          />
+          <div className={styles.heroOverlay}>
+            <motion.a
+              href="/"
+              className={styles.backLink}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <ArrowLeft size={20} />
+              Back to Home
+            </motion.a>
+            <motion.h1
+              className={styles.heroTitle}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+            >
+              Celebratory <span className={styles.heroAccent}>Cakes &amp; Bakes</span>
+            </motion.h1>
+            <motion.p
+              className={styles.heroDescription}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+            >
+              Stunning custom cakes and baked creations for every occasion.
+              <br />
+              Caribbean-inspired flavors, beautifully designed and freshly made to order.
+            </motion.p>
+          </div>
+        </section>
 
         {/* Service Content */}
         <ServicePageContent
