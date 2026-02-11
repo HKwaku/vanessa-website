@@ -9,7 +9,7 @@ export default function Home() {
   // Homepage slideshow images
   const slideshowImages = [
     { 
-      src: '/images/food/event11.jpeg', 
+      src: '/images/events/event11.jpeg', 
       alt: '' },
     {
       src: '/images/events/event1.jpeg',
