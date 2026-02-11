@@ -8,19 +8,22 @@ import Contact from '@/components/Contact';
 export default function Home() {
   // Homepage slideshow images
   const slideshowImages = [
+    {
+      src: '/images/events/event4.jpeg',
+      alt: ''
+    },
+    
     { 
       src: '/images/events/event11.jpeg', 
       alt: '' },
-    {
-      src: '/images/events/event1.jpeg',
-      alt: ''
-    },
+
     {
       src: '/images/events/event3.jpeg',
       alt: ''
     },
+
     {
-      src: '/images/events/event4.jpeg',
+      src: '/images/events/event1.jpeg',
       alt: ''
     },
     {
