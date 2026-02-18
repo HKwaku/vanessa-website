@@ -120,6 +120,23 @@
   padding-left: 2rem;
 }
 
+/* Hygiene Badge */
+.hygieneBadge {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.hygieneBadge:hover {
+  transform: scale(1.05);
+}
+
+.hygieneBadgeImg {
+  height: 40px;
+  width: auto;
+}
+
 .menuButton {
   display: none;
   flex-direction: column;
@@ -159,6 +176,7 @@
     top: 0;
     right: -100%;
     height: 100vh;
+    height: 100dvh;
     width: 70%;
     max-width: 300px;
     background: var(--warm-white);
@@ -167,6 +185,9 @@
     gap: 2rem;
     transition: right 0.4s ease;
     box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+    overscroll-behavior: contain;
+    overflow-y: auto;
+    padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom) 0;
   }
 
   .menu.menuOpen {
@@ -175,6 +196,9 @@
 
   .navLink {
     font-size: 1.3rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
   }
 
   .dropdown {
@@ -202,6 +226,14 @@
 
   .dropdownItem:hover {
     padding-left: 1.5rem;
+  }
+
+  .hygieneBadge {
+    margin-top: 1rem;
+  }
+
+  .hygieneBadgeImg {
+    height: 48px;
   }
 }
 

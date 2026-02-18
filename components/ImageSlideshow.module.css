@@ -112,6 +112,10 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .slideshow {
+    max-height: 400px;
+  }
+
   .navButton {
     width: 40px;
     height: 40px;
@@ -136,8 +140,12 @@
 }
 
 @media (max-width: 480px) {
+  .slideshow {
+    max-height: 300px;
+  }
+
   .navButton {
-    display: none; /* Hide arrows on very small screens */
+    display: none;
   }
 
   .dots {

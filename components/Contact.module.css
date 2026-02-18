@@ -194,7 +194,11 @@
 
 @media (max-width: 768px) {
   .contact {
-    padding: 5rem 1.5rem;
+    padding: 4rem 1rem;
+  }
+
+  .heading {
+    font-size: clamp(2rem, 6vw, 3rem);
   }
 
   .formArea {
@@ -207,5 +211,21 @@
 
   .method {
     padding: 1.2rem;
+    min-height: 48px;
+  }
+
+  .method:hover {
+    transform: none;
+  }
+
+  .submitButton {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .formGroup input,
+  .formGroup select,
+  .formGroup textarea {
+    font-size: 16px;
   }
 }

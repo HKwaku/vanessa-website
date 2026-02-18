@@ -17,9 +17,9 @@ const services = [
   },
   {
     icon: ShoppingBag,
-    title: 'Menu & Take Away',
-    description: 'Weekly meal delivery and event catering featuring fresh Caribbean cuisine. From intimate gatherings to grand celebrations, we handle every detail.',
-    features: ['Weekly Meal Prep', 'Event Catering', 'Corporate Events', 'Party Catering'],
+    title: 'Takeaway Menu',
+    description: 'Preordered takeaway service featuring fresh Caribbean cuisine with global influences. Order by Wednesday evening for Friday or Saturday delivery or collection.',
+    features: ['Preorder Takeaway', 'Event Catering', 'Corporate Events', 'Party Catering'],
     link: '/menu',
     color: 'var(--deep-green)',
     image: '/images/food/takeaway2.jpeg',
@@ -28,7 +28,7 @@ const services = [
   {
     icon: Cake,
     title: 'Celebratory Cakes & Bakes',
-    description: 'Stunning custom cakes and baked goods for every celebration. Each creation is freshly made with Caribbean-inspired flavors and beautiful decorations.',
+    description: 'Stunning custom cakes and baked goods for every celebration. Each creation is freshly made with beautiful decorations.',
     features: ['Wedding Cakes', 'Birthday Cakes', 'Custom Designs', 'Fresh Baked'],
     link: '/cakes',
     color: 'var(--burnt-orange)',

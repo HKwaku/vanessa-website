@@ -97,12 +97,22 @@
 
 @media (max-width: 768px) {
   .footer {
-    padding: 3rem 1.5rem 1.5rem;
+    padding: 3rem 1rem 1.5rem;
   }
 
   .grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .brandName {
+    font-size: 1.5rem;
+  }
+
+  .links a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
   }
 
   .bottom {

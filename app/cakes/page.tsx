@@ -12,20 +12,36 @@ export default function Cakes() {
   // Cakes slideshow images
   const slideshowImages = [
     {
-      src: '/images/cakes/sunset-ombre-cake.jpeg',
-      alt: 'Beautiful sunset ombre celebration cake'
+      src: '/images/cakes/cake1.jpeg',
+      alt: ''
     },
     {
-      src: '/images/cakes/red-velvet-cake.jpeg',
-      alt: 'Elegant red velvet cake'
+      src: '/images/cakes/cake2.jpeg',
+      alt: ''
     },
     {
-      src: '/images/cakes/carrot-cake.jpeg',
-      alt: 'Decorated carrot cake with marzipan carrots'
+      src: '/images/cakes/cake3.jpeg',
+      alt: ''
     },
     {
-      src: '/images/cakes/chocolate-caramel-cake.jpeg',
-      alt: 'Decadent chocolate caramel cake'
+      src: '/images/cakes/cake4.jpeg',
+      alt: ''
+    },
+    {
+      src: '/images/cakes/cake5.jpeg',
+      alt: ''
+    },
+    {
+      src: '/images/cakes/cake6.jpeg',
+      alt: ''
+    },
+    {
+      src: '/images/cakes/cake7.jpeg',
+      alt: ''
+    },
+    {
+      src: '/images/cakes/cake8.jpeg',
+      alt: ''
     }
   ];
 
@@ -40,7 +56,7 @@ export default function Cakes() {
         'Tiered creations',
         'Delivery & setup included'
       ],
-      pricing: 'From £300',
+      pricing: 'From £350',
       bookingText: 'Inquire About Wedding Cakes'
     },
     {
@@ -53,7 +69,7 @@ export default function Cakes() {
         'Custom flavors',
         'Personalized designs'
       ],
-      pricing: 'From £60',
+      pricing: 'From £75',
       bookingText: 'Order Celebration Cakes'
     },
     {

@@ -35,7 +35,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
   gap: 3rem;
 }
 
@@ -153,7 +153,11 @@
 
 @media (max-width: 768px) {
   .services {
-    padding: 5rem 1.5rem;
+    padding: 4rem 1rem;
+  }
+
+  .header {
+    margin-bottom: 3rem;
   }
 
   .grid {
@@ -162,12 +166,28 @@
   }
 
   .card {
-    padding: 2.5rem;
+    padding: 0;
+    border-radius: 12px;
   }
 
   .cardIcon {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .cardTitle {
+    font-size: 1.6rem;
+  }
+
+  .cardLink {
+    font-size: 1.1rem;
+    padding: 0.75rem 0;
+    min-height: 44px;
+  }
+
+  .featurePill {
+    font-size: 0.85rem;
+    padding: 0.45rem 0.85rem;
   }
 }
 /* Add these styles to your ServicesOverview.module.css */

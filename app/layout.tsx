@@ -1,5 +1,12 @@
 import './globals.css'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  viewportFit: 'cover',
+}
 
 export const metadata: Metadata = {
   title: 'Vanessa Haughton | Chef & Culinary Creative',

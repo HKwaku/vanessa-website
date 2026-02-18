@@ -26,7 +26,7 @@ export default function Navigation() {
       href: '/#services',
       dropdown: [
         { label: 'Private Dining Experiences', href: '/private-dining' },
-        { label: 'Menu & Take Away', href: '/menu' },
+        { label: 'Takeaway Menu', href: '/menu' },
         { label: 'Celebratory Cakes & Bakes', href: '/cakes' }
       ]
     },
@@ -108,6 +108,14 @@ export default function Navigation() {
               </motion.a>
             )
           ))}
+
+          <a href="https://ratings.food.gov.uk/business/1561162/set-the-table" target="_blank" rel="noopener noreferrer" className={styles.hygieneBadge} aria-label="5 star food hygiene rating">
+            <img 
+              src="/images/fhrs-badge-5.svg" 
+              alt="Food Hygiene Rating 5 - Very Good" 
+              className={styles.hygieneBadgeImg}
+            />
+          </a>
         </div>
       </div>
     </motion.nav>

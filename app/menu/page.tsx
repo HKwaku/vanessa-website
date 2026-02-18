@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowLeft, Star, Truck, Check } from 'lucide-react';
+import { ArrowLeft, Star, Clock } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import ImageSlideshow from '@/components/ImageSlideshow';
@@ -18,33 +18,21 @@ const heroImages = [
 ];
 
 const starters = [
-  { name: 'Saltfish Fritters', quantity: '3 pieces', description: 'Crispy cod fritters cooked with caramelised onions and peppers, served with pickled carrot purée', popular: true },
-  { name: 'Sorrel Glazed Chicken Wings', quantity: '4 pieces', description: '' },
-  { name: 'Tamarind, Honey & Ginger Lamb Ribs', quantity: '2 pieces', description: '' },
+  { name: 'Saltfish Fritters', quantity: '3 pieces', description: 'Crispy cod fritters cooked with caramelised onions and peppers, served with pickled carrot purée' },
   { name: 'Mini Beef Patties', quantity: '2 pieces', description: '', popular: true },
 ];
 
 const mains = [
   { name: 'Curry Goat', description: 'Caribbean classic, fork tender meat cooked in an aromatic curry sauce', popular: true },
-  { name: 'Jerk Chicken', description: '24hr marinated jerk finished with bell peppers and spring onions' },
+  { name: 'Jerk Chicken', description: '24hr marinated jerk finished with bell peppers and spring onions', popular: true },
   { name: 'Pollo a la Brasa', description: 'Soy and garlic roasted chicken with a zingy green sauce' },
   { name: 'Double Dose of Pulses', description: 'Red lentil dal served alongside roasted pumpkin, coconut and chickpea sauce' },
 ];
 
 const desserts = [
-  { name: 'Sticky Toffee Pudding', description: 'Served with clotted cream' },
-  { name: 'Hibiscus & Vanilla Baked Cheesecake', description: 'Served with clotted cream' },
-  { name: 'Apple Crumble Cake', description: 'Served with clotted cream' },
+  { name: 'Sticky Toffee Pudding', description: 'Served with clotted cream', popular: true },
 ];
 
-const deliveryFeatures = [
-  'Weekly meal delivery service',
-  'Caribbean cuisine with global influences',
-  'Custom menus based on your tastes',
-  'Dietary needs accommodated',
-  'Fresh ingredients, expertly prepared',
-  'Convenient & time-saving',
-];
 
 export default function Menu() {
   return (
@@ -77,7 +65,7 @@ export default function Menu() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              Menu &amp; <span className={styles.accent}>Take Away</span>
+              Takeaway <span className={styles.accent}>Menu</span>
             </motion.h1>
             <motion.p
               className={styles.heroDescription}
@@ -85,14 +73,14 @@ export default function Menu() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Authentic Caribbean flavors with global influences.
+              Authentic Caribbean flavours with global influences.
               <br />
-              Fresh, premium ingredients &mdash; delivered to your door or available for pickup.
+              Fresh, premium ingredients &mdash; available for delivery or collection.
             </motion.p>
           </div>
         </section>
 
-        {/* Delivery Info Strip */}
+        {/* Order Info Strip */}
         <section className={styles.deliveryStrip}>
           <div className={styles.container}>
             <motion.div
@@ -104,25 +92,15 @@ export default function Menu() {
             >
               <div className={styles.deliveryHeader}>
                 <div className={styles.deliveryIcon}>
-                  <Truck size={28} />
+                  <Clock size={28} />
                 </div>
                 <div>
-                  <h2>Weekly Meal Delivery</h2>
-                  <p className={styles.deliveryPricing}>Starting at £14 per serving</p>
+                  <h2>Preordered Take Away Service</h2>
                 </div>
               </div>
               <p className={styles.deliveryDescription}>
-                Restaurant-quality Caribbean meals with global influences delivered to your door.
-                A week&apos;s worth of gourmet meals prepared fresh, tailored to your preferences.
+                Please order by 10pm Wednesday evening for delivery or collection on Friday or Saturday.
               </p>
-              <div className={styles.deliveryFeatures}>
-                {deliveryFeatures.map((feature) => (
-                  <div key={feature} className={styles.deliveryFeature}>
-                    <Check size={16} />
-                    <span>{feature}</span>
-                  </div>
-                ))}
-              </div>
             </motion.div>
           </div>
         </section>
@@ -224,7 +202,10 @@ export default function Menu() {
                     transition={{ delay: index * 0.1, duration: 0.6 }}
                   >
                     <div className={styles.itemHeader}>
-                      <h3 className={styles.itemName}>{item.name}</h3>
+                      <h3 className={styles.itemName}>
+                        {item.name}
+                        {item.popular && <Star size={16} className={styles.starIcon} />}
+                      </h3>
                     </div>
                   </motion.div>
                 ))}
@@ -246,9 +227,9 @@ export default function Menu() {
             >
               <h2>Ready to Order?</h2>
               <p>
-                Contact us to place your order or set up weekly meal delivery.
+                Contact us to place your takeaway order.
                 <br />
-                Starting at £14 per serving with custom menu options available.
+                Order by 10pm Wednesday for Friday or Saturday delivery or collection.
               </p>
               <div className={styles.ctaButtons}>
                 <a href="/#contact" className={styles.primaryButton}>Order Now</a>

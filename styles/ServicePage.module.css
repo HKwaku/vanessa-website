@@ -2,6 +2,7 @@
 .heroSlideshow {
   position: relative;
   height: 100vh;
+  height: 100dvh;
   min-height: 500px;
 }
 
@@ -352,6 +353,7 @@
 @media (max-width: 768px) {
   .heroSlideshow {
     height: 100vh;
+    height: 100dvh;
     min-height: 400px;
   }
 
@@ -376,13 +378,22 @@
   }
 
   .serviceCard {
-    padding: 2.5rem;
+    padding: 1.5rem;
   }
 
   .serviceHeader {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 1rem;
+  }
+
+  .serviceHeader h2 {
+    font-size: 1.8rem;
+  }
+
+  .serviceIcon {
+    width: 60px;
+    height: 60px;
   }
 
   .featureGrid {
@@ -390,7 +401,13 @@
   }
 
   .flavorGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ctaButton {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
   }
 
   .ctaButtons {
@@ -398,8 +415,31 @@
     align-items: stretch;
   }
 
+  .primaryButton,
+  .secondaryButton {
+    min-height: 48px;
+  }
+
   .ctaSection {
-    padding: 4rem 1.5rem;
+    padding: 3.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .serviceCard {
+    padding: 1.25rem;
+  }
+
+  .flavorGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .menuLinkCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .menuLinkCard h2 {
+    font-size: 1.8rem;
   }
 }
 /* Add these styles to your existing ServicePage.module.css */

@@ -26,6 +26,8 @@
 
 html {
   scroll-behavior: smooth;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -35,6 +37,8 @@ body {
   line-height: 1.7;
   font-size: 18px;
   overflow-x: hidden;
+  overscroll-behavior: none;
+  -webkit-text-size-adjust: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -104,4 +108,11 @@ button {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--deep-green);
+}
+
+/* Disable hover effects on touch devices to prevent sticky hover */
+@media (hover: none) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
 }

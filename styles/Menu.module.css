@@ -7,6 +7,7 @@
 .heroSlideshow {
   position: relative;
   height: 100vh;
+  height: 100dvh;
   min-height: 500px;
   margin-top: 0;
 }
@@ -87,17 +88,54 @@
   margin: 0 auto;
 }
 
+.infoCards {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.5rem;
+  align-items: start;
+}
+
 .deliveryCard {
   background: var(--warm-white);
   border-radius: 16px;
   padding: 2.5rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   border: 1px solid rgba(139, 157, 131, 0.15);
+  text-align: center;
+}
+
+.hygieneCard {
+  background: var(--warm-white);
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(139, 157, 131, 0.15);
+  text-align: center;
+}
+
+.hygieneCard h2 {
+  font-size: 1.5rem;
+  color: var(--deep-green);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.hygieneIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(58, 90, 64, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--deep-green);
+  flex-shrink: 0;
 }
 
 .deliveryHeader {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1.5rem;
   margin-bottom: 1.25rem;
 }
@@ -135,6 +173,9 @@
   color: var(--olive);
   margin-bottom: 1.5rem;
   max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .deliveryFeatures {
@@ -198,10 +239,16 @@
 }
 
 .itemsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.25rem;
   margin-top: 2rem;
+}
+
+.itemsGrid > * {
+  flex: 0 1 400px;
+  max-width: 500px;
 }
 
 .menuItem {
@@ -211,6 +258,7 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease;
   border: 1px solid rgba(139, 157, 131, 0.15);
+  text-align: center;
 }
 
 .menuItem:hover {
@@ -226,8 +274,9 @@
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--charcoal);
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   flex-wrap: wrap;
   line-height: 1.3;
@@ -325,6 +374,7 @@
 @media (max-width: 768px) {
   .heroSlideshow {
     height: 100vh;
+    height: 100dvh;
     min-height: 400px;
   }
 
@@ -341,33 +391,52 @@
   }
 
   .deliveryStrip {
-    padding: 3rem 1.5rem;
+    padding: 2rem 1rem;
   }
 
   .deliveryCard {
-    padding: 1.75rem;
+    padding: 1.5rem;
   }
 
   .deliveryHeader {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+    align-items: center;
+    gap: 0.75rem;
   }
 
-  .deliveryFeatures {
-    grid-template-columns: 1fr;
+  .deliveryHeader h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .deliveryIcon {
+    width: 48px;
+    height: 48px;
   }
 
   .menuSection {
-    padding: 3rem 1.5rem;
+    padding: 3rem 1rem;
   }
 
-  .itemsGrid {
-    grid-template-columns: 1fr;
+  .categoryTitle {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+
+  .itemsGrid > * {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 
   .menuCategory {
     margin-bottom: 3rem;
+  }
+
+  .menuItem {
+    padding: 1.25rem;
+  }
+
+  .itemName {
+    font-size: 1.1rem;
   }
 
   .ctaButtons {
@@ -375,14 +444,20 @@
     align-items: stretch;
   }
 
+  .primaryButton,
+  .secondaryButton {
+    min-height: 48px;
+  }
+
   .ctaSection {
-    padding: 3.5rem 1.5rem;
+    padding: 3rem 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .heroSlideshow {
     height: 100vh;
+    height: 100dvh;
   }
 
   .deliveryCard {
